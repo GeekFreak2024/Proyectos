@@ -865,7 +865,8 @@ ul.contact li:before {
         text-align: left;
     }
 
-    .header-image-container-secondary, .header-image {
+    .header-image-container-secondary,
+    .header-image {
         height: auto;
         /* Ajusta la altura automáticamente */
         align-items: flex-start;
@@ -955,5 +956,10 @@ ul.contact li:before {
         height: 2em;
         line-height: 2em;
         width: 2em;
+    }
+
+    /*technology, consulting, talentlid*/
+    .header-imag {
+        text-align: center;
     }
 }
