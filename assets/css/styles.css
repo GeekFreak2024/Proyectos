@@ -1,0 +1,959 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+.header-image {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background-position: center;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.contact-icons-container {
+    position: fixed;
+    top: 230px;
+    left: 0;
+    z-index: 1000;
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-icons li {
+    background-image: linear-gradient(to right, #B0980C, #91A2AF);
+    padding: 8px;
+    margin-bottom: 2px;
+    border-radius: 0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icons a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 10%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+nav * {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container img {
+    height: 90px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    position: relative;
+    margin-left: -20px;
+    margin-bottom: 10px;
+}
+
+.menu li a {
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    display: block;
+    padding: 10px;
+}
+
+.menu li a:hover {
+    color: #91A2AF;
+}
+
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: 100%;
+    left: 0;
+    width: max-content;
+    border-top: 3px solid #91A2AF;
+}
+
+.dropdown-menu li {
+    margin: 0;
+    padding: 10px;
+}
+
+.dropdown-menu li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.dropdown-toggle:hover+.dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+.menu.show .dropdown-menu {
+    display: block;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 769px) {
+    .menu {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+.historia-empresa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    text-align: center;
+}
+
+.texto,
+.imagen {
+    flex: 1;
+    max-width: 50%;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+.texto {
+    margin-right: 50px;
+}
+
+.imagen {
+    margin-top: 20px;
+}
+
+.texto h2 {
+    color: #B0980C;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.texto p {
+    color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.proposito,
+.vision,
+.valor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+    margin-left: 150px;
+    margin-right: 150px;
+    text-align: center;
+}
+
+.text-container h4 {
+    color: #B0980C;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.text-wrapper h4 {
+    color: #B0980C;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    text-align: justify;
+    margin-bottom: 100px;
+}
+
+.text-container p {
+    color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.text-wrapper p {
+    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    text-align: left;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.image-container {
+    flex: 1;
+    opacity: 0.5;
+}
+
+.image-wrapper {
+    flex: 1;
+}
+
+.text-container {
+    margin-right: 40px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-container,
+.image-container {
+    flex: 0 0 50%;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.lista-container {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.lista {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 160px;
+}
+
+.lista li {
+    padding: 20px;
+    width: 100%;
+    background-image: none;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lista li a {
+    display: block;
+    color: #3b3a3a;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.lista li.active {
+    background-image: linear-gradient(to right, #777777, #B0980C);
+}
+
+.lista li.active a {
+    color: #fff;
+}
+
+/* Estilos específicos para la lista desplegable en móviles */
+.dropdown-menu.mobile-show {
+    display: block;
+    /* Mostrar la lista desplegable */
+    position: static;
+    /* Restaurar la posición predeterminada */
+    width: auto;
+    /* Restaurar el ancho automático */
+    padding: 0;
+    /* Eliminar el relleno */
+    background-color: transparent;
+    /* Establecer el color de fondo transparente */
+    border: none;
+    /* Eliminar el borde */
+}
+
+.dropdown-menu.mobile-show li a {
+    color: #000;
+    /* Establecer el color del texto */
+    font-size: 13px;
+    /* Ajustar el tamaño de la fuente */
+    text-transform: none;
+    /* Restaurar la transformación del texto */
+    padding: 0;
+    /* Agregar relleno */
+    display: block;
+    /* Mostrar como bloque */
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.dropdown-menu.mobile-show li a:hover {
+    color: #91A2AF;
+    ;
+    /* Cambiar el color de fondo al pasar el mouse */
+}
+
+.contenedor-principal,
+.contenedor-nosotras {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.contenido-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contenido.show,
+.content.show {
+    display: flex;
+}
+
+.contenido,
+.content {
+    display: none;
+}
+
+.titulo-personalizado {
+    color: #B0980C;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.servicio {
+    justify-content: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 70px;
+}
+
+.mi-lista li {
+    margin-bottom: 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    height: 100%;
+}
+
+.btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #B0980C, #777777, #91A2Af);
+    color: white !important;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Estilo para el carrusel */
+.swiper {
+    width: 1200px;
+    margin-left: 120px;
+    margin-right: 300px;
+    margin-bottom: 100px;
+    margin-top: -20px;
+    align-items: center;
+}
+
+/* Estilos personalizados para el párrafo */
+.titulo {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+/*Contacto*/
+.header-image-container-secondary {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-image-secondary {
+    width: 100%;
+    height: auto;
+    animation: zoomAnimation 5s infinite alternate;
+}
+
+@keyframes zoomAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+#contacto .inner {
+    padding: 5em 0 3em 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 55em;
+}
+
+#contacto .inner form {
+    margin: 0 3em 0 0;
+    width: calc(50% - 1.5em);
+}
+
+#contacto .inner .copyright {
+    border-top: solid 1px #777777;
+    color: #777777;
+    list-style: none;
+    margin: 4em 0 2em 0;
+    padding: 2em 0 0 0;
+    width: 100%;
+}
+
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 3em);
+}
+
+.field {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 1.5em 0 0 1.5em;
+    width: calc(100% - 1.5em);
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #777777;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #333;
+    margin-left: -2em;
+    font-size: 16px;
+}
+
+label {
+    color: #777777;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 0.7em 0;
+    margin-left: -2em;
+    text-transform: uppercase;
+}
+
+ul.actions {
+    display: flex;
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+
+}
+
+input[type="submit"] {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #777777;
+    color: #777777;
+    font-size: 15px;
+    font-weight: bold;
+    height: 3.65em;
+    padding: 0 2.25em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: -0.5rem;
+    margin-top: 30px;
+
+}
+
+ul.contact {
+    list-style: none;
+    padding: 0;
+}
+
+ul.contact li {
+    text-decoration: none;
+    margin: 2.5em 0 0 0;
+    padding: 0 0 0 3.25em;
+    position: relative;
+}
+
+ul.contact li:before {
+    display: inline-block;
+    color: #777777;
+}
+
+ul.contact li:before {
+    border-radius: 100%;
+    border: solid 1px #777777;
+    display: inline-block;
+    font-size: 16px;
+    height: 2.5em;
+    left: 0;
+    line-height: 2.35em;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 2.5em;
+}
+
+.iconos:before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    text-transform: none !important;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    line-height: inherit;
+}
+
+.iconos.solid:before {
+    font-weight: 900;
+}
+
+.iconos.brands:before {
+    font-family: 'Font Awesome 5 Brands';
+}
+
+/*Footer*/
+.custom-footer {
+    font-family: sans-serif;
+}
+
+.custom-footer .footer-content {
+    width: 100%;
+}
+
+.custom-footer .footer-images {
+    margin-bottom: 20px;
+}
+
+.custom-footer .footer-image {
+    text-align: center;
+}
+
+.custom-footer .image-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.custom-footer .image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.custom-footer .image-title {
+    font-size: 16px;
+    color: white;
+}
+
+.custom-footer .footer-line {
+    height: 1px;
+    background-color: #ccc;
+    width: 100%;
+}
+
+.custom-footer .footer-logo-img {
+    max-width: 100px;
+}
+
+.custom-footer .footer-text {
+    font-size: 15px;
+    color: white;
+    word-break: break-word;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*technology, consulting, talentlid*/
+.header-imag {
+    text-align: center;
+}
+
+.header-text {
+    text-align: center;
+    color: #777777;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #B0980C, #777777, #91A2Af);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.centered-text {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    /* Ancho máximo para evitar que los títulos se extiendan demasiado */
+}
+
+.line {
+    width: 50px;
+    border-top: 2px solid #333;
+    margin: 20px auto;
+    /* Margen superior e inferior para centrar la línea */
+}
+
+.team-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-image:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.custom-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-image-container:hover .overlay {
+    display: block;
+}
+
+.overlay-text {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.overlay-text p {
+    margin-bottom: 0;
+}
+
+/* Estilos para pantallas pequeñas*/
+@media (max-width: 853px) {
+    nav {
+        position: static;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 62px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+    }
+
+    nav ul li {
+        text-align: left;
+    }
+
+    .logo-container img {
+        height: 90px;
+    }
+
+    .menu-toggle {
+        order: 2;
+        display: block;
+        font-size: 24px;
+        cursor: pointer
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        padding: 15px;
+        border-top: 2px solid #91A2AF;
+    }
+
+    .menu.show {
+        display: flex;
+        /*block Cambiado*/
+        flex-direction: column;
+        /* AGREGADO Alinea los elementos en una columna */
+    }
+
+    .menu li {
+        margin: 10px 5;
+        margin-left: 20px;
+    }
+
+    .menu-toggle:hover {
+        color: #91A2AF;
+        /* Cambia el color al hacer hover */
+    }
+
+    .historia-empresa {
+        flex-direction: column;
+        /* Cambia la dirección del flexbox a columnas */
+        align-items: center;
+        /* Centra los elementos verticalmente */
+        margin-left: 42px;
+        /* Ajusta el margen izquierdo */
+        margin-right: 42px;
+        /* Ajusta el margen derecho */
+    }
+
+    .texto,
+    .imagen {
+        max-width: 100%;
+        /* Establece el ancho máximo al 100% para que ocupe todo el ancho en pantallas pequeñas */
+    }
+
+    .texto {
+        margin-right: 0;
+        /* Elimina el margen derecho en pantallas pequeñas */
+        margin-bottom: 20px;
+        /* Añade espacio entre el texto y la imagen en pantallas pequeñas */
+    }
+
+    .imagen img {
+        max-width: 100%;
+        /* La imagen ocupa todo el ancho disponible */
+        height: auto;
+        /* Mantiene la proporción de aspecto de la imagen */
+    }
+
+    .proposito,
+    .valor,
+    .vision {
+        flex-direction: column;
+        /* Cambia la dirección del flexbox a columnas */
+        align-items: center;
+        /* Centra los elementos verticalmente */
+        margin-left: 42px;
+        /* Ajusta el margen izquierdo */
+        margin-right: 42px;
+        /* Ajusta el margen derecho */
+        margin-top: -120px;
+    }
+
+    .text-container,
+    .image-container {
+        max-width: 100%;
+    }
+
+    .text-container {
+        margin-right: 0;
+        /* Elimina el margen derecho en pantallas pequeñas */
+        margin-bottom: 20px;
+        /* Añade espacio entre el texto y la imagen en pantallas pequeñas */
+    }
+
+    .image-container img {
+        width: 100%;
+        /* La imagen ocupa todo el ancho disponible */
+        height: auto;
+        /* Mantiene la proporción de aspecto de la imagen */
+    }
+
+    .lista {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin-left: 30px;
+        margin-top: 70px;
+    }
+
+    .lista li {
+        padding: 5px 0;
+        width: calc(100% - 50px);
+        /* Calcula el ancho para incluir el padding */
+        display: block;
+        /* Asegura que los elementos se apilen verticalmente */
+    }
+
+    .lista li a {
+        text-align: left;
+    }
+
+    .header-image-container-secondary, .header-image {
+        height: auto;
+        /* Ajusta la altura automáticamente */
+        align-items: flex-start;
+        /* Alinea el contenido al inicio (arriba) */
+    }
+
+    .header-image-secondary {
+        animation: none;
+        /* Deshabilita la animación */
+        width: 100%;
+        /* Asegura que la imagen ocupe todo el ancho */
+        height: auto;
+        /* Mantiene la proporción de aspecto de la imagen */
+    }
+
+    .servicio {
+        align-items: center;
+        margin-left: 42px;
+        margin-right: 42px;
+        margin-top: 50px;
+    }
+
+    .titulo {
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: 42px;
+        margin-right: 42px;
+    }
+
+    .swiper {
+        width: 100%;
+        margin-left: 25px;
+        margin-top: 20px;
+    }
+
+    .swiper-slide img {
+        width: calc(80% - 50px);
+
+    }
+
+    .image-circle,
+    .image-title {
+        display: none;
+    }
+
+    #contacto .inner {
+        width: 100%;
+        padding: 5em 4em;
+    }
+
+    #contacto .inner form {
+        width: 100%;
+        margin: 0;
+    }
+
+    .fields {
+        width: 100%;
+    }
+
+    .field {
+        padding: 1em 0;
+        width: 100%;
+    }
+
+    .field input,
+    .field textarea {
+        margin-left: 0;
+    }
+
+    label {
+        margin-left: 0;
+    }
+
+    ul.actions {
+        justify-content: center;
+    }
+
+    input[type="submit"] {
+        margin-left: 0;
+    }
+
+    ul.contact li {
+        padding-left: 3em;
+    }
+
+    ul.contact li:before {
+        height: 2em;
+        line-height: 2em;
+        width: 2em;
+    }
+}
